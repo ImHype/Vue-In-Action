@@ -1,0 +1,9 @@
+{
+	"watch": true,
+	"entry": {
+	  "index": "./src/js/page/index.js"
+	},
+	"output": {
+	  "filename": "dist/js/[name].js"
+	}
+}

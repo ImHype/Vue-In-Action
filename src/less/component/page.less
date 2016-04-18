@@ -1,0 +1,806 @@
+.topBar{
+	background-image: url(../image/topBar.png);
+	height: 5.7rem;
+	width: 100%;
+	position: fixed;
+    top: 0;
+    z-index: 1000;
+
+	h1{
+		.backHistory{
+			font-size: 3rem;
+			color: @whiteColor;
+			height: 100%;
+			line-height: 100%;
+			display: block;
+			position: absolute;
+			line-height:  5.7rem;
+			text-indent: 1rem;
+			width: 5rem;
+            background-image: url(../image/backHistory.png);
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: 1.25rem 2.2rem;
+		}
+		line-height:  5.7rem;
+		text-align: center;
+		font-size: 2rem;
+		color: @whiteColor;
+	}
+}
+.bottomBar{
+	height: 5.2rem;
+	position: fixed;
+	bottom: 0;
+	width: 100%;
+	border-top: .1rem solid #F1F2F6;
+	background-image: url(../image/bottomBar.png);
+
+	&>ul{
+		display: block;
+		width: 100%;
+
+		&>li{
+			float: left;
+			width: 33.3%;
+			height: 5.1rem;
+			text-align: center;
+			position: relative;
+			background-repeat: no-repeat;
+			background-position: center 0.5rem;
+
+			a{
+				width: 4.5rem;
+                height: 3.5rem;
+				text-align: center;
+				display: block;
+                background-size: 4.5rem 3.5rem;
+                margin: 0 auto;
+                margin-top: 0.75rem;
+			}
+		}
+	}
+}
+.searchBar{
+	height: 5.8rem;
+	background-color: @bgColor;
+	border-bottom: 0.1rem solid #CFCFCF;
+	padding: 1.2rem;
+    .search_input{
+		width: 85%;
+		padding: 0 1rem 0 0;
+		float: left;
+		&>[type=text],
+        &>div{
+			width: 100%;
+			height: 3.5rem;
+			line-height: 3.3rem;
+			border: 1px solid @borderColor;
+			border-radius: 0.3rem;
+			text-indent: 4rem;
+            background-image: url("/image/search.png");
+            background-size: 2rem 2rem;
+            background-position: 0.7rem 0.7rem;
+            background-repeat: no-repeat;
+            background-color: @whiteColor;
+            color: #bbbbbb;
+		}
+
+	}
+	.search_button{
+		width: 15%;
+		float: left;
+		line-height: 3.3rem;
+		height: 3.3rem;
+		text-align: center;
+
+		.btn{
+			background-color: #36D267;
+			border: 0.1rem solid #1DBF71;
+			color: @whiteColor;
+			border-radius: 0.3rem;
+		}
+	}
+}
+.head {
+  .headWrap(){
+    border-bottom: 1px solid @borderColor;
+    display: -webkit-box;
+    -webkit-box-orient: horizontal;
+  }
+  .headInner(){
+    -webkit-box-align: center;
+  }
+  .headImage(@width:11rem,@height:11rem){
+    overflow: hidden;
+    padding: 1.2rem;
+    .headBox{
+      width: @width;
+      height:@height;
+      border: 1px solid @borderColor;
+      overflow: hidden;
+    }
+    img{
+      width:100%;
+    }
+  }
+  .headDesc(){
+    -webkit-box-flex: 1;
+    padding: 1.2rem 0.7rem 0.7rem 0.7rem;
+  }
+}
+.doctorList{
+	.doctorListTitle{
+		background-color: @bgColor;
+		color: #A2A0A0;
+		height: 3.7rem;
+		line-height: 3.7rem;
+		text-align: center;
+	}
+  /**
+    .doctors>ul>li>a
+     doctors>ul>li .headContainer
+  */
+
+	.doctors{
+		background-color: @whiteColor;
+		&>ul{
+			padding: 0 1.2rem;
+			&>li{
+                &:last-of-type>a{
+                  border-bottom: none;
+                }
+                &>a{
+                   .head .headWrap();
+
+                  &>div {
+                    .head .headInner();
+                  }
+                }
+				.headContainer{
+                  .head .headImage();
+                }
+				.doctorIntroduce{
+                  .head .headDesc();
+
+                  .doctorIdentity{
+						margin-bottom: 0.9rem;
+						&>span:nth-of-type(1){
+							font-size: 1.6rem;
+							color: #333;
+						}
+						&>span:nth-of-type(2){
+							font-size: 1.4rem;
+							color: @grayColor;
+						}
+					}
+					.doctorSpace{
+						margin-bottom: 0.9rem;
+						&>span:nth-of-type(1){
+							font-size: 1.4rem;
+							color: @grayColor;
+						}
+						&>span:nth-of-type(2){
+							font-size: 1.4rem;
+							color: @grayColor;
+						}
+					}
+					.doctorMaster{
+						ul{
+							li{
+								height: 2rem;
+								line-height: 2rem;
+								border: 1px solid #66D8A1;
+								color: #66D8A1;
+								font-size: 1.3rem;
+								display: block;
+								padding: 0 0.5rem;
+								float: left;
+								border-radius: 0.2rem;
+								margin-right: 0.8rem;
+								margin-bottom: 0.5rem;
+								overflow: hidden;
+                                white-space: nowrap;
+                                text-overflow: ellipsis;
+                                max-width: 8rem;
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+
+.searchList{
+	.doctorListTitle{
+		background-color: @bgColor;
+		color: #A2A0A0;
+		height: 3.7rem;
+		line-height: 3.7rem;
+		text-align: center;
+	}
+	.doctors{
+		background-color: @whiteColor;
+		&>ul{
+			padding: 0 1.2rem;
+			&>li{
+				border-bottom: 0.1rem solid @borderColor;
+				&:last-of-type{
+					border-bottom: none;
+				}
+				.headContainer{
+					width: 30%;
+					float: left;
+					padding: 1.2rem;
+					img{
+						border: 0.1rem solid @borderColor;
+					}
+				}
+				.doctorIntroduce{
+					width: 70%;
+					padding: 1.2rem 0.7rem;
+					float: left;
+
+					.doctorIdentity{
+						margin-bottom: 0.9rem;
+						&>span:nth-of-type(1){
+							font-size: 1.6rem;
+							color: #333;
+						}
+						&>span:nth-of-type(2){
+							font-size: 1.4rem;
+							color: @grayColor;
+						}
+					}
+					.doctorSpace{
+						margin-bottom: 0.9rem;
+						&>span:nth-of-type(1){
+							font-size: 1.4rem;
+							color: @grayColor;
+						}
+						&>span:nth-of-type(2){
+							font-size: 1.4rem;
+							color: @grayColor;
+						}
+					}
+					.doctorMaster{
+						ul{
+							li{
+								height: 2.4rem;
+								line-height: 2rem;
+								color: #22AC38;
+								font-size: 1.5rem;
+								display: block;
+								padding: 0 ;
+								float: left;
+							}
+							li::after{
+								content:" 、"
+							}
+							li:last-of-type::after{
+								content:""
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+.formWrap{
+	background-color: @bgColor;
+	padding: 1rem;
+
+	.formBox{
+		padding: 1rem 1.5rem;
+		background-color: @whiteColor;
+		border-radius: 0.2rem;
+
+		.head{
+			width: 10.7rem;
+			height: 10.7rem;
+			display: block;
+			margin: 0 auto;
+			margin-bottom: 1rem;
+		}
+
+		.formLine{
+			border-bottom: 0.1rem solid #E2E2E2;
+			height: 4.5rem;
+			line-height: 4.5rem;
+			text-indent: 1.2rem;
+			color: @grayColor;
+
+			&>div{
+				width: 100%;
+				height: 100%;
+				&>[type='text']{
+					border: none;
+					width: 100%;
+					height: 4.3rem;
+					display: block;
+					padding: 0 1.4rem;
+				}
+			}
+			&.right_btn{
+				position: relative;
+				margin-bottom: 3rem;
+				&>div:nth-of-type(1){
+					padding-right: 13rem;
+				}
+				&>div:nth-of-type(2){
+					position: absolute;
+					right: 0;
+					top: 0;
+					width: 12rem;
+					height: 100%;
+					padding-top: 0.7rem;
+				}
+			}
+			.font_1{
+				letter-spacing: 2rem;
+				width: 6.5rem;
+				display: block;
+				float: left;
+				overflow: hidden;
+				&>span{
+					display: block;
+					width: 12rem;
+				}
+			}
+			.font_2{
+				letter-spacing: 0.3rem;
+				width: 6.5rem;
+				display: block;
+				float: left;
+				overflow: hidden;
+				&>span{
+					display: block;
+					width: 10rem;
+				}
+			}
+		}
+	}
+}
+
+.userCenterBtnBox{
+	a.btn {
+		margin-top: 1.5rem;
+	}
+	a.btn:first-of-type {
+		margin-top: 0;
+	}
+}
+.userCenter{
+	.editHead{
+		width: 1.9rem;
+		height: 1.9rem;
+		display: block;
+		background-image: url(/image/editPerson.png);
+		background-size: 1.9rem 1.9rem;
+		background-position: center;
+		position: absolute;
+		top: 1.2rem;
+		right: 1.2rem;
+	}
+}
+
+
+.preAppoint{
+	.formWrap:first-of-type .formBox{
+		padding: 0.5rem;
+		padding-bottom: 0;
+		.formLine{
+			text-indent: 2rem;
+
+			&:last-of-type{
+				border-bottom: none;
+			}
+		}
+	}
+
+	.doctors{
+		background-color: @whiteColor;
+		&>ul{
+			padding: 0;
+			&>li{
+				border-bottom: 0.1rem solid @borderColor;
+				&:last-of-type{
+					border-bottom: none;
+				}
+                .head .headWrap();
+
+                &>div{
+                  .head .headInner();
+                }
+
+                .headContainer{
+                  .head .headImage();
+				}
+				.doctorIntroduce{
+                  .head .headDesc();
+
+					.doctorIdentity{
+						margin-bottom: 0.9rem;
+						&>span:nth-of-type(1){
+							font-size: 1.6rem;
+							color: #333;
+						}
+						&>span:nth-of-type(2){
+							font-size: 1.4rem;
+							color: @grayColor;
+						}
+					}
+					.doctorSpace{
+						margin-bottom: 0.9rem;
+						&>span:nth-of-type(1){
+							font-size: 1.4rem;
+							color: @grayColor;
+						}
+						&>span:nth-of-type(2){
+							font-size: 1.4rem;
+							color: @grayColor;
+						}
+					}
+					.doctorMaster{
+						ul{
+							li{
+								height: 2.4rem;
+								line-height: 2rem;
+								border: 0.1rem solid #66D8A1;
+								color: #66D8A1;
+								font-size: 1.3rem;
+								display: block;
+								padding: 0 1rem;
+								float: left;
+								border-radius: 0.2rem;
+								margin-right: 0.8rem;
+								margin-bottom: 0.5rem;
+								overflow: hidden;
+                                white-space: nowrap;
+                                text-overflow: ellipsis;
+                                max-width: 10rem;
+							}
+						}
+					}
+
+				}
+			}
+		}
+	}
+}
+
+.uploadCase{
+  padding-bottom: 8rem;
+  padding-bottom: 8rem;
+  height:0;
+
+	.caseList{
+		position: relative;
+		&>li{
+			width: 48%;
+			display: block;
+			margin-bottom: 0.5rem;
+			position: absolute;
+			top: 0;
+			&:nth-of-type(2n+1){
+				margin-right: 4%;
+			}
+			&:nth-of-type(2n+2){
+				left: 52%;
+			}
+		}
+	}
+}
+
+.phonePogin{
+	.formWrap {
+		.formBox{
+			 .formLine.right_btn{
+					margin-bottom: 0;
+			 }
+		}
+	}
+}
+
+.doctorSearchList{
+	.doctorSearchListTitle{
+		background-color: @bgColor;
+		color: #A2A0A0;
+		height: 3.7rem;
+		line-height: 3.7rem;
+		text-align: center;
+	}
+	.doctorSearchs{
+		background-color: @whiteColor;
+		&>ul{
+			padding: 0 1.2rem;
+			&>li{
+				border-bottom: 0.1rem solid @borderColor;
+				padding: 1rem 0 0 0;
+				.doctorSearchTitle{
+					font-size: 1.4rem;
+					color: @grayColor;
+					margin-bottom: 1.2rem;
+				}
+				.doctorSearchContent{
+					padding: 0 0.5rem;
+					li{
+						height: 2.6rem;
+                        line-height: 2.2rem;
+                        border: 1px solid #66D8A1;
+                        font-size: 1.3rem;
+                        display: block;
+                        padding: 0 1rem;
+                        float: left;
+                        border-radius: 0.2rem;
+                        margin-right: 0.8rem;
+                        margin-bottom: 1.2rem;
+                        overflow: hidden;
+                        white-space: nowrap;
+                        text-overflow: ellipsis;
+                        max-width: 10rem;
+					}
+				}
+			}
+		}
+	}
+}
+
+.foucusOnList{
+	.doctors>ul>li{
+		position: relative;
+	}
+	.btnUnFoucus{
+		&:extend(.btnWarning);
+		width: 7.2rem;
+		height: 2.4rem;
+		line-height: 2.2rem;
+		font-size: 1.2rem;
+		position: absolute;
+		right: 1.5rem;
+		top: 1rem;
+	}
+}
+
+.doctorAssess{
+	padding-right: 0.5rem;
+	.content{
+		margin: 0.5rem 0;
+		span{
+			display: block;
+			width: 5rem;
+			float: left;
+			font-size: 1.4rem;
+		}
+		div{
+			color: @grayColor;
+			font-size: 1.4rem;
+			float: left;
+			width: 100%;
+			height: 2rem;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+		}
+	}
+}
+
+.preAppointList{
+	.preAppointItem{
+        &:last-of-type{
+          border-bottom:none!important;
+          overflow: hidden;
+        }
+        &>a{
+          border-bottom:none!important;
+        }
+        border-bottom: 1px solid @borderColor;
+		.preAppointDesc{
+			padding: 0 1.2rem;
+			position: relative;
+			margin-bottom: 2rem;
+			color: #555;
+			padding-right: 9rem;
+			&>div{
+				margin-bottom: 0.5rem;
+			}
+			a.btnDelPreAppoint{
+				&:extend(.btnBlue);
+				width: 7.5rem;
+				height: 2.7rem;
+				line-height: 2.5rem;
+				position: absolute;
+				right: 1rem;
+				top: 1rem;
+			}
+		}
+	}
+}
+
+.doctorDesc{
+	padding: 1.2rem;
+    border-bottom: 1px solid @borderColor;
+    .head .headWrap();
+
+    &>div {
+      .head .headInner();
+    }
+	.doctorHeadBox{
+        .doctorHead{
+          .head .headImage(11rem,11rem);
+        }
+	}
+  .doctorHeadDesc{
+    .head .headDesc();
+  }
+  .doctorDescBox{
+  	padding: 1.1rem 1.5rem;
+    -webkit-box-flex: 1;
+    -ms-box-flex: 1;
+    -o-box-flex: 1;
+    box-flex: 1;
+
+    .doctorIdentity{
+      span{
+        &:nth-of-type(1){
+          font-size: 1.6rem;
+          color: #333;
+        }
+        &:nth-of-type(2){
+          font-size: 1.4rem;
+          color: @grayColor;
+          margin-left: 2rem;
+        }
+      }
+        margin-bottom: 1rem;
+    }
+    .doctorSpace{
+    	&>div:nth-of-type(1){
+    		font-size: 1.5rem;
+    		margin-bottom: 1rem;
+    	}
+    	&>div:nth-of-type(2){
+    		font-size: 1.5rem;
+	    	margin-bottom: 1rem;
+    	}
+    }
+    .userControl{
+    	.btn{
+    		width: 7.1rem;
+    		height: 3rem;
+    		line-height: 3rem;
+    		float: left;
+    		&:nth-of-type(1){
+    			margin-right: 1.5rem;
+    		}
+    	}
+    }
+  }
+
+}
+.doctorDescBody{
+	background-color: @bgColor;
+	padding: 1.1rem 1.3rem 0 1.3rem;
+
+	.doctorDescBox{
+		width: 100%;
+		float: none;
+		background-color: @whiteColor;
+		padding: 1rem;
+		margin-bottom: 1rem;
+
+		.doctorBoxHead{
+			color: #000;
+			padding-bottom: 1rem;
+			border-bottom: 0.1rem solid #ccc;
+		}
+		.doctorBoxContent{
+			padding-top: 1rem;
+            color: @grayColor;
+		}
+	}
+}
+
+.booktime{
+  padding :0 1rem;
+  &>div{
+    background-color: @whiteColor ;
+    padding-right: 4rem;
+    padding-left: 0.8rem;
+    margin-top: 1rem;
+    border: 0.1rem solid #EEEEEE;
+    position: relative;
+    ul{
+      width:100%;
+      li{
+        height:4rem;
+        line-height:4rem;
+        border-bottom: 0.1rem solid #EEEEEE;
+        padding-left: 2rem;
+      }
+    }
+
+    .worktime_btn{
+      position: absolute;
+      right:0;
+      top:0;
+      width: 4rem;
+      text-align: center;
+      font-size: 3rem;
+      color: #E2E2E2;
+      line-height:8rem;
+    }
+  }
+}
+.hospitals{
+  background: @whiteColor;
+  & > ul{
+    padding :0 15px;
+    & > li{
+      height: 10.15rem;
+      border-bottom: 1px solid @borderColor;
+
+
+      .hospital{
+        display: -webkit-box;
+        -webkit-box-orient: horizontal;
+        padding: 0.9rem 0;
+        .hospital_img_box{
+          padding: 0.4rem;
+
+          .hospital_img{
+            width: 7.5rem;
+            height: 7.5rem;
+            overflow: hidden;
+            border:1px solid @borderColor;
+
+            img{
+              width:100%;
+            }
+          }
+        }
+        .hospital_desc{
+          padding-top:1rem;
+          padding-bottom:0.5rem;
+          padding-left:2.2rem;
+          padding-right:1.6rem;
+          -webkit-box-flex: 1;
+          &>div{
+            margin-bottom: 0.7rem;
+          }
+          .hospital_info{
+            font-size: 1.6rem;
+          }
+          .hospital_name{
+            overflow: hidden;
+          }
+          .hospital_kind{
+            font-size: 1.2rem;
+            padding-left: 2.5rem;
+            background-image: url("../image/hospitalIcon.png");
+            background-size: 1.8rem 1.5rem;
+            background-repeat: no-repeat;
+            height:1.5rem;
+            line-height:1.5rem;
+          }
+          .hospital_address{
+            font-size: 1.2rem;
+            padding-left: 2rem;
+            background-image: url("../image/location.png");
+            background-size: 1.3rem 1.7rem;
+            background-repeat: no-repeat;
+            height:1.7rem;
+            line-height:1.7rem;
+          }
+        }
+      }
+      &:last-of-type{
+        border-bottom:none;
+      }
+    }
+  }
+}
